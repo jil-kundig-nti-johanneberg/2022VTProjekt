@@ -1,1 +1,88 @@
-/* Denna fil skall innehålla din CSS kod */
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+nav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 10vh;
+    background-color: lightpink;
+    font-family: sans-serif;
+}
+
+.burger {
+    margin-right: 50px;
+    cursor: pointer;
+}
+
+.navLinks {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    position: absolute;
+    right: 0px;
+    height: 90vh;
+    top: -90vh;
+    background-color: lightpink;
+    align-items: center;
+    width: 20%;
+    transition: all 1s;
+}
+
+.navActive {
+    transform: translateY(100vh);
+}
+
+.navLinks li {
+    list-style: none;
+}
+
+.navLinks a {
+    color: lightsalmon;
+    text-decoration: none;
+    letter-spacing: 3px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.burger div {
+    width: 25px;
+    height: 3px;
+    background-color: lightsalmon;
+    margin: 5px;
+    border-radius: 10%;
+    transition: all 0.3s;
+}
+
+.toggle .line1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.toggle .line2{
+    opacity: 0;
+}
+
+.toggle .line3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+#wrapper {
+    height: 100vh;
+    display: grid;
+    grid-template-areas: 
+    "hea nav"
+    "s01 s01"
+    "art art"
+    "s02 s02";
+    grid-template-columns: 80% 20%;
+    grid-template-rows: 10vh 10vh 40vh 40vh;
+
+}
+
+header {
+    grid-area: hea;
+    background: lightgreen;
+}
